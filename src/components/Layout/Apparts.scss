@@ -1,0 +1,20 @@
+.diplay {
+    background-color: lightgray;
+    min-height: 50vh;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width: 768px) {
+    .diplay {
+        justify-content: center;
+        background-color:white ;
+        padding: 0;
+    }
+    
+}

@@ -1,0 +1,38 @@
+.appart_page {
+    color: #ff6060;
+    h1{
+        font-weight: 400;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    h2 {
+        font-weight: 400;
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+
+    }
+    img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        border: radius 1rem;
+        box-shadow: rgb (149 157 165 / 20%) 0px 8px 24px;
+
+    }
+    .appart_page_head {
+        display: flex;
+        
+    }
+    & .appart_tags {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
+        gap: 1rem;
+        span {
+            background-color: #ff6060;
+            color: rgb(117, 51, 51);
+            padding: 0.5em 1em;
+        }
+        
+
+    }
+}
