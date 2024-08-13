@@ -1,7 +1,9 @@
 import React from 'react'
 import './Appartpage.scss'
+import { useParams } from 'react-router-dom'
 
 function Appartpage() {
+    const {id} = useParams()
     return (
         <div className='appart_page'>
             <div>

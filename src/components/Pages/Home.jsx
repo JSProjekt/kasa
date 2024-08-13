@@ -1,17 +1,16 @@
 import React from 'react'
 import Banner from '../Layout/Banner.jsx'
-import Apparts from '../Layout/Apparts.jsx'
-import Layout from '../Layout/Layout.jsx'
 import './Home.scss'
+import AppartementList from '../Layout/AppartementList.jsx'
 
 
 function App() {
   return (
     <div>
-      <Layout>
+    
         <Banner />
-        <Apparts />
-      </Layout>
+        <AppartementList />
+    
     </div>
   )
 }
