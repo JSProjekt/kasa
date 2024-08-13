@@ -1,0 +1,29 @@
+.appart_page_description {
+    p {
+        margin-block: 0;
+    }
+    .description_title{
+        background-color: #ff6060;
+        color:white;
+        padding: 0.2em 1em;
+        border-radius: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            font-size: 2rem;
+            cursor: pointer;
+
+        }
+    }
+    .description_content {
+        background-color: lightgray;
+        color: #ff6060;
+        padding: 1em;
+        border-radius: 0.7rem;
+        position: relative;
+        top:-0.4rem;
+        z-index: -1;
+    }
+}

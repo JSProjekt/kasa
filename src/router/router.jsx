@@ -15,7 +15,7 @@ import Layout from '../components/Layout/Layout.jsx'
       element: <Layout />,
       children: [
         {
-          path: '/',
+          path: '/home',
           element: <Home />,
         },
         {

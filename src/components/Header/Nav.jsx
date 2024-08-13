@@ -4,13 +4,14 @@ import "./Nav.scss";
 
 function Nav() {
   return (
+
     <nav className="nav">
-      <NavLink to="/">
+      <NavLink to="/home">
         <div className="nav__logo">
           <img src="logo.png" alt="Logo" />
         </div>
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/home">
         <div>Accueil</div>
       </NavLink>
       <NavLink to="/about">
