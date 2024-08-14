@@ -1,12 +1,12 @@
-import  "./"
+import  "./DescriptionComponent.scss"
 import React from "react"
 
-function AppartPageDescription () {
+function DescriptionComponent () {
     return (
-        <div className='appart_page_description'>
+        <div className='description_component'>
         <p className='description_title'>
             <span>Description</span>
-            <i className="fa-solid fa-chevron-down"></i>
+            <i className="fa-solid fa-chevron-up"></i>
             </p>
 
         <p className='description_content'>
@@ -16,4 +16,4 @@ function AppartPageDescription () {
     )
 }
 
-export default AppartPageDescription
+export default DescriptionComponent

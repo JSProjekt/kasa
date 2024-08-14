@@ -1,0 +1,75 @@
+.appart_page_head {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+
+    .appart_page_title {
+        flex-grow: 1;
+    }
+ 
+    h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-block: 0;
+        font-weight: 400;
+    }
+    h1 {
+        margin-block: 0;
+    }
+    .owner{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        @media screen and (max-width:768px) {
+            flex-direction: row;
+        }
+
+        .owner_details{
+            display: flex;
+            gap: 0.5rem;
+
+            @media screen and (max-width:768px){
+                order: 1;
+            }
+        }
+        .owner_profil {
+            height:40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: lightgray;
+        }
+        .owner_stars{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.2rem;
+            * {
+                font-size: 2rem;
+            }
+            .mode_on{
+                color: #ff6060;
+            }
+            .mode_off{
+                color: lightgray;
+            }
+
+        }
+    }
+}
+ .appart_tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    gap: 1rem;
+    span {
+        background-color: #ff6060;
+        color: rgb(117, 51, 51);
+        padding: 0.3em 0.5em;
+        border-radius: 0.7rem;
+        text-align: center;
+    }
+}

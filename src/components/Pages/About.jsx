@@ -1,11 +1,18 @@
 import React from 'react'
-import Banner from '../Layout/Banner'
+import BannerComponent from '../Layout/BannerComponent.jsx'
+import DescriptionComponent from '../Layout/DescriptionComponent.jsx'
+import './About.scss'
 
 function About() {
   return (
     <>
-      <Banner />
-      
+      <BannerComponent />
+      <div className='about_content'>
+      <DescriptionComponent />
+      <DescriptionComponent />
+      <DescriptionComponent />
+      <DescriptionComponent />
+      </div>
     </>
   )
 }
