@@ -1,17 +1,18 @@
 import React from 'react'
 import './Appartement.scss'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
-function Appartement(props) {
+function Appartement({appartement}) {
+  console.log(appartement)
   return (
-    <NavLink to={`/flat`}>
+    <NavLinkLink to="/flat">
     <div className='appartement'>
         
-        <img src={props.cover} alt={props.title}/>
-      <div className='appartement_sub'>{props.title}</div>
+        <img src={appartement.cover} alt={appartement.title}/>
+      <div className='appartement_sub'>{appartement.title}</div>
       
     </div>
-    </NavLink>
+    </NavLinkLink>
     
   )
 }

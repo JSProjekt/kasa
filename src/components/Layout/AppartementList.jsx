@@ -3,27 +3,30 @@ import './AppartementList.scss'
 import Appartement from './Appartement.jsx'
 
 
+
+
 function AppartementList() {
   const [appartements, setAppartements] = useState([]);
 
   useEffect(appartementFetch, []);
-    
+
   function appartementFetch() {
-    fetch("../data/appartement.json")
-      .then(response => response.json())
-      .then(response => setAppartements(response))
+
+    fetch('../../data/appartements.json')
+      .then((res) => res.json())
+      .then((res) => setAppartements(res))
       .catch(console.error);
-      
+
   }
 
     return (
     <div className="display">
-      {appartements.map(appartement => (
-        <Appartement title={appartement.title} appartement={appartement.cover} />
+      {appartements.map(data => (
+        <Appartement key={data.id} title={data.title} appartement={data.cover} />
       ))}
-      
-    </div>
-  )
-}
 
-export default AppartementList
+    </div>
+    )
+  }
+
+  export default AppartementList
