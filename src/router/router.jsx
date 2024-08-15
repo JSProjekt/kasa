@@ -13,23 +13,20 @@ import Layout from '../components/Layout/Layout.jsx'
     {
       path: '/',
       element: <Layout />,
+      errorElement: <ErrorPage404 />,
       children: [
         {
           path: '/home',
           element: <Home />,
         },
         {
-          path: '/appartement/:id',
+          path: '/flat',
           element: <Appartpage />,
         },
         {
           path: '/about',
           element: <About />,
         },
-        {
-          path: '404',
-          element: <ErrorPage404 />,
-        }
       ]
     }
   ]);

@@ -7,6 +7,10 @@
     gap: 1rem;
     padding: 1rem;
     justify-content: space-between;
+    & > * {
+        width: 100%;
+        max-width: 20rem;
+    }
 
 }
 
@@ -18,3 +22,4 @@
     }
     
 }
+

@@ -2,6 +2,7 @@ import React from 'react'
 import './AppartPageHead.scss'
 
 function AppartHead() {
+
   return (
     <div className='appart_page_head'>
     <div className='appart_page_title'>

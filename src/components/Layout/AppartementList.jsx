@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './AppartementList.scss'
 import Appartement from './Appartement.jsx'
-import data from '../../data/logement.json'
+
 
 function AppartementList() {
-  return (
-    <div className='display'>
-    {data.map((appartement, index) => (
-      <Appartement data={appartement}/>
-    ))}
+  const [appartements, setAppartements] = useState([]);
+
+  useEffect(appartementFetch, []);
+    
+  function appartementFetch() {
+    fetch("../data/appartement.json")
+      .then(response => response.json())
+      .then(response => setAppartements(response))
+      .catch(console.error);
+      
+  }
+
+    return (
+    <div className="display">
+      {appartements.map(appartement => (
+        <Appartement title={appartement.title} appartement={appartement.cover} />
+      ))}
+      
     </div>
   )
 }
