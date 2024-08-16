@@ -1,10 +1,11 @@
 import React from 'react'
 import './BannerComponent.scss'
 
-function BannerComponent() {
+function BannerComponent(props) {
+  
   return (
     <div className='banner_component'>
-    <img src='https://via.placeholder.com/800/400' alt='appartement' />
+    <img src={imageUrl} alt='appartement' />
 </div>
   )
 }

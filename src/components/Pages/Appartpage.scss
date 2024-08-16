@@ -17,6 +17,7 @@
     .description_group {
         display: flex;
         gap: 1rem;
+        overflow: hidden;
 
         @media screen and (max-width:768px) {
             flex-direction: column;

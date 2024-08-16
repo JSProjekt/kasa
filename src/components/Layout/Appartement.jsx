@@ -1,18 +1,18 @@
 import React from 'react'
 import './Appartement.scss'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-function Appartement({appartement}) {
-  console.log(appartement)
+function Appartement(data) {
+  console.log(data)
   return (
-    <NavLinkLink to="/flat">
+    <NavLink to="/appartement" state= {{ appartID: data.id}}>
     <div className='appartement'>
         
-        <img src={appartement.cover} alt={appartement.title}/>
-      <div className='appartement_sub'>{appartement.title}</div>
+        <img src={data.cover} alt={data.title}/>
+      <div className='appartement_sub'>{data.title}</div>
       
     </div>
-    </NavLinkLink>
+    </NavLink>
     
   )
 }

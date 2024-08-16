@@ -1,5 +1,6 @@
 .description_component {
     margin-bottom: 1rem;
+    flex-basis: 50%;
     
     p {
         margin-block: 0;
@@ -27,5 +28,15 @@
         position: relative;
         top:-0.4rem;
         z-index: -1;
+        animation: slideIn 0.5s ease-in-out;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }

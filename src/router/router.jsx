@@ -6,6 +6,8 @@ import Appartpage from '../components/Pages/Appartpage.jsx'
 import About from '../components/Pages/About.jsx'
 import ErrorPage404 from '../components/Pages/404.jsx'
 import Layout from '../components/Layout/Layout.jsx'
+import React, { useState } from 'react'
+
 
 
   
@@ -20,7 +22,7 @@ import Layout from '../components/Layout/Layout.jsx'
           element: <Home />,
         },
         {
-          path: '/flat',
+          path: '/appartement',
           element: <Appartpage />,
         },
         {

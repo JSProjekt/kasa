@@ -8,21 +8,18 @@ import Appartement from './Appartement.jsx'
 function AppartementList() {
   const [appartements, setAppartements] = useState([]);
 
-  useEffect(appartementFetch, []);
-
-  function appartementFetch() {
-
-    fetch('../../data/appartements.json')
-      .then((res) => res.json())
-      .then((res) => setAppartements(res))
-      .catch(console.error);
-
-  }
+  useEffect(
+    function AppartementFetch() {
+      fetch('appartements.json')
+        .then(resp => resp.json())
+        .then((data) => setAppartements(data));
+  
+    }, []);
 
     return (
     <div className="display">
       {appartements.map(data => (
-        <Appartement key={data.id} title={data.title} appartement={data.cover} />
+        <Appartement id={data.id} key={data.id} title={data.title} cover={data.cover} />
       ))}
 
     </div>

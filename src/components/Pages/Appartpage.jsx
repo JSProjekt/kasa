@@ -1,19 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Appartpage.scss'
-import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import DescriptionComponent from '../Layout/DescriptionComponent.jsx'
 import BannerComponent from '../Layout/BannerComponent.jsx'
 import AppartHead from '../Layout/AppartPageHead.jsx'
 
 function Appartpage() {
-    const { id } = useParams()
+    const [appart, setAppart] = useState(null);
+    const appartLocation = useLocation();
+
+    useEffect(
+        function AppartementInfosFetch() {
+            fetch('appartements.json')
+                .then((resp) => resp.json())
+                .then((apparts) => {
+                    const appart = apparts.find((appart) => appart.id === appartLocation.state.appartID);
+                    setAppart(appart);
+                    })
+                    .catch(console.error);
+        }
+    , []);
+        if (appart == null) return <div>Loading...</div>;
+
     return (
         <div className='appart_page'>
-           <BannerComponent />
-           <AppartHead />
+           <BannerComponent cover={appart.cover} />
+           <AppartHead appart={appart}/>
             <div className='description_group'>
-            <DescriptionComponent />
-            <DescriptionComponent />
+            <DescriptionComponent title="Description" content={appart.description}/>
+            <DescriptionComponent title="Equipements"content={appart.equipments.map((equipement) => ( <li>{equipement}</li> ))}/>
+            
             </div>
         </div>
     )
