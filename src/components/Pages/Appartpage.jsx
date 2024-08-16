@@ -24,11 +24,11 @@ function Appartpage() {
 
     return (
         <div className='appart_page'>
-           <BannerComponent cover={appart.cover} />
+           <BannerComponent array={appart.pictures} />
            <AppartHead appart={appart}/>
             <div className='description_group'>
             <DescriptionComponent title="Description" content={appart.description}/>
-            <DescriptionComponent title="Equipements"content={appart.equipments.map((equipement) => ( <li>{equipement}</li> ))}/>
+            <DescriptionComponent title="Equipements"content={appart.equipments.map((equipement,index) => ( <li key={index}>{equipement}</li> ))}/>
             
             </div>
         </div>

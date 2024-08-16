@@ -1,11 +1,52 @@
 .banner_component {
     margin-bottom: 2rem;
-    img {
-        width: 100%;
-        height: 20rem;
-        object-fit: cover;
-        border-radius: 1rem;
-        box-shadow: rgb (149 157 165 / 20%) 0px 8px 24px;
+    position: relative;
+
+    .next_btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 1rem;
+        background-color: transparent;
+        color: white;
+        font-size: 3rem;
+        border: none;
+        cursor: pointer;
 
     }
+
+    .preview_btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 3rem;
+        border: none;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .banner_component_img {
+        position: relative;
+        height: 20rem;
+        width: 100%;
+
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: rgb (149 157 165 / 20%) 0px 8px 24px;
+            opacity: 0;
+
+            &.display_picture {
+                opacity: 1;
+            }
+        }
+    }
+
+
 }

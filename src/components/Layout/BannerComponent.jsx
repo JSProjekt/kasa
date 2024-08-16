@@ -1,11 +1,31 @@
 import React from 'react'
 import './BannerComponent.scss'
+import { useState } from 'react'
 
-function BannerComponent(props) {
+function BannerComponent({array}) {
+const [picDisplay, setPicDisplay] = useState(0);
+
+const displayClass = (i) => {
+  if (i === picDisplay) 
+    return 'display_picture';
   
+};
+
+const nextPic = () => {
+  setPicDisplay((picDisplay + 1) % array.length);
+  
+};
+const prevPic = () => {
+  setPicDisplay((picDisplay - 1 + array.length) % array.length);
+};
+
   return (
     <div className='banner_component'>
-    <img src={imageUrl} alt='appartement' />
+      <div className='banner_component_img'>
+    {array.map((image, index) => (<img key={image} src={image} alt="" className= {displayClass(index)}/> ))}
+    </div>
+    <button className='preview_btn' onClick={prevPic} > <i class="fa-solid fa-chevron-right"></i></button>
+    <button className='next_btn' onClick={nextPic} > <i class="fa-solid fa-chevron-left"></i></button>
 </div>
   )
 }
