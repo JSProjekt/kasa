@@ -18,11 +18,11 @@ import React, { useState } from 'react'
       errorElement: <ErrorPage404 />,
       children: [
         {
-          path: '/home',
+          path: '/',
           element: <Home />,
         },
         {
-          path: '/appartement',
+          path: '/appartement/:id',
           element: <Appartpage />,
         },
         {

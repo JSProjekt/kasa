@@ -11,7 +11,7 @@ function ErrorPage404() {
     <div className='error_404'>
       <h1>404</h1>
       <h2>Oops! La page que vous demandez n'existe pas</h2>
-      <NavLink to="/home">Retrouner sur la page d'accueil</NavLink>
+      <NavLink to="/">Retrouner sur la page d'accueil</NavLink>
     </div>
     </>
   )

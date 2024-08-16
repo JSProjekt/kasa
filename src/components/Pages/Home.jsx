@@ -4,15 +4,15 @@ import './Home.scss'
 import AppartementList from '../Layout/AppartementList.jsx'
 
 
-function App() {
+function Home() {
   return (
     <div>
     
-        <Banner />
+        <Banner imgBanner={'Imagesource1.png'} title='Chez vous, partout et ailleurs'/>
         <AppartementList />
     
     </div>
   )
 }
 
-export default App
+export default Home

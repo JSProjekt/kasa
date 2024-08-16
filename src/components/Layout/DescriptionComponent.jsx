@@ -20,3 +20,5 @@ function DescriptionComponent (props) {
 }
 
 export default DescriptionComponent
+
+// soit props.content soit props.equipements et on affiche une list

@@ -1,12 +1,11 @@
 import React from 'react'
 import './AppartPageHead.scss'
 
+const array5 = [1, 2, 3, 4, 5];
 function AppartHead({ appart }) {
 
     const { name } = appart.host;
     const [firstName, lastName] = name.split(' ');
-    const array5 = [1, 2, 3, 4, 5];
-
 
     return (
         <div className='appart_page_head'>
@@ -31,7 +30,7 @@ function AppartHead({ appart }) {
                     {array5.map((num) => (
                         <span key={num} className={appart.rating >= num ? "mode_on" : ""}>★</span>
                     ))}
-                    </div>
+                </div>
             </div>
         </div>
     );
