@@ -10,7 +10,7 @@ function AppartementList() {
   return (
     <div className="display">
       {appartements.map(data => (
-        <Appartement id={data.id} title={data.title} cover={data.cover} />
+        <Appartement key={data.id} id={data.id} title={data.title} cover={data.cover} />
       ))}
 
     </div>

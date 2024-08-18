@@ -1,9 +1,24 @@
 .footer {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 3rem 0 2rem 0;
     text-align: center;
-    min-height: 200px;
     display: grid;
     place-items: center;
+    gap: 1.5rem;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    img {
+        width: 122px;
+        height: 39.44px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 3rem 11rem 2rem 11rem;
+        
+}
 }

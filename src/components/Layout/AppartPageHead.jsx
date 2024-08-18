@@ -28,7 +28,7 @@ function AppartHead({ appart }) {
                 </div>
                 <div className='owner_stars'>
                     {array5.map((num) => (
-                        <span key={num} className={appart.rating >= num ? "mode_on" : ""}>★</span>
+                        <span key={num} className={appart.rating >= num ? "mode_on" : ""}><i class="fa-solid fa-star"></i></span>
                     ))}
                 </div>
             </div>

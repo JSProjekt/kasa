@@ -24,8 +24,8 @@ const prevPic = () => {
       <div className='banner_component_img'>
     {array.map((image, index) => (<img key={image} src={image} alt="" className= {displayClass(index)}/> ))}
     </div>
-    <button className='preview_btn' onClick={prevPic} > <i class="fa-solid fa-chevron-right"></i></button>
-    <button className='next_btn' onClick={nextPic} > <i class="fa-solid fa-chevron-left"></i></button>
+    <button className='preview_btn' onClick={prevPic} > <i className="fa-solid fa-chevron-right"></i></button>
+    <button className='next_btn' onClick={nextPic} > <i className="fa-solid fa-chevron-left"></i></button>
 </div>
   )
 }
