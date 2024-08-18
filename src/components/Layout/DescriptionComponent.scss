@@ -8,27 +8,40 @@
     .description_title{
         background-color: #ff6060;
         color:white;
-        padding: 0.2em 1em;
+        padding: 0.2em 0.7em;
         border-radius: 0.7rem;
+        height: 52px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 18px;
+        font-weight: 700;
 
         i {
             font-size: 2rem;
             cursor: pointer;
-
+            transition: transform 0s;
+        
         }
+        i.rotated
+        {
+        transform: rotate(180deg);}
     }
     .description_content {
-        background-color: lightgray;
-        color: #ff6060;
+        background-color: #F6F6F673;
+        color: black;
         padding: 1em;
         border-radius: 0.7rem;
         position: relative;
         top:-0.4rem;
         z-index: -1;
         animation: slideIn 0.5s ease-in-out;
+        font-size: 18px;
+        font-weight: 400;
+        list-style: none;
+        li {
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
