@@ -2,4 +2,5 @@ body {
     font-family:'montserrat', sans-serif;
     max-width: 1240px;
     margin: auto;
+    min-height: auto;
 }

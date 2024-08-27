@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
     
-        <Banner imgBanner={'Imagesource1.png'} title='Chez vous, partout et ailleurs'/>
+        <Banner />
         <AppartementList />
     
     </div>

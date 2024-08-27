@@ -73,8 +73,9 @@ h2 {
     }
 }
  .appart_tags {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    display: flex ;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
     padding: 0.5rem 0;
     height: 25px;
@@ -87,5 +88,6 @@ h2 {
         text-align: center;
         font-size: 14px;
         font-weight: 700;
+        min-width: 114px;
     }
 }
